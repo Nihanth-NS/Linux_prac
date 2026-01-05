@@ -1,0 +1,4 @@
+ssh username@hostname_or_ -----> ssh from one server to another -----> ssh bob@devapp01
+sudo apt-get update, sudo apt-get install python3 -------> update and install python
+iptables ----> used to check, update, delete security policies
+sudo iptables -L ---> list of policies
