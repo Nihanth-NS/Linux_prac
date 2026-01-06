@@ -2,3 +2,7 @@ ssh username@hostname_or_ -----> ssh from one server to another -----> ssh bob@d
 sudo apt-get update, sudo apt-get install python3 -------> update and install python
 iptables ----> used to check, update, delete security policies
 sudo iptables -L ---> list of policies
+sudo iptables -A INPUT -s ip_address -p tcp --dport 80 -j ACCEPT  ----> sudo iptables -A INPUT -s 172.16.238.187 -p tcp --dport 80 -j ACCEPT ----> Accept http requests from "172.16.238.187" ip address.
+sudo iptables -A INPUT -j DROP ---> to drop all incoming traffic 
+sudo iptables -I OUTPUT 1 -d google.com -p tcp --dport 443 -j ACCEPT ---> Adding a rule in a chain at 1st place where we will allow http access to google dest.
+(-s where traffic is coming from -d where traffic will go)
